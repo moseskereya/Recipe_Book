@@ -1,0 +1,27 @@
+﻿@model Moses.Models.Pie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Pie Detail</h2>
+<div class="row">
+    <div class="col-md-4">
+        <h3>@Model.Name</h3>
+        <img src="@Model.ImgUrl" class="img-thumbnail img-responsive" alt="img" />
+    </div>
+    <div class="col-md-8">
+        <p>@Model.ShortDescription</p>
+        <p>@Model.LongDescription</p>
+        <p>@Model.Price.ToString("c")</p>
+        <p>CategoryId @Model.CategotyId</p>
+        <div class="btns">
+            <button class="btn">
+               @Html.ActionLink("Home", "Index", "Pies")
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
